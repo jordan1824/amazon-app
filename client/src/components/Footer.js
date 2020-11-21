@@ -2,8 +2,8 @@ import React from 'react'
 
 function Footer(props) {
   return (
-    <footer>
-      <h1>Footer</h1>
+    <footer className="footer">
+      <p className="footer__text">All Rights Reserved.</p>
     </footer>
   )
 }

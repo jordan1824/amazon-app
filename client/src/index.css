@@ -5,6 +5,55 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.app {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-areas:
+    'Header'
+    'Main'
+    'Footer';
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+}
+
+/* HEADER */
+.header {
+  grid-area: Header;
+  background: #242e42;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  color: white;
+}
+.header__brand {
+  font-size: 2.3rem;
+  margin: 0;
+}
+.header__nav {
+  list-style: none;
+  display: flex;
+}
+.header__nav-item {
+  margin-left: 10px;
+}
+
+/* MAIN SECTION */
+.main {
+  grid-area: Main;
+}
+
+/* FOOTER */
+.footer {
+  grid-area: Footer;
+  background: #242e42;
+  padding: 5px 10px;
+  color: white;
+}
+.footer__text {
+  text-align: center;
+}
+
 /* HOMEPAGE */
 .product-blocks-container {
   display: flex;

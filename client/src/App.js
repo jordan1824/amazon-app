@@ -8,15 +8,17 @@ import Home from './components/Home'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <main>
-        <Switch>
-          <Route path="/" component={Home} exact />
-        </Switch>
-      </main>
-      <Footer />
-    </BrowserRouter>
+    <div className="app">
+      <BrowserRouter>
+        <Header />
+        <main className="main">
+          <Switch>
+            <Route path="/" component={Home} exact />
+          </Switch>
+        </main>
+        <Footer />
+      </BrowserRouter>
+    </div>
   )
 }
 
