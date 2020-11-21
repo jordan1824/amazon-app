@@ -5,6 +5,54 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* HOMEPAGE */
+.product-blocks-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* PRODUCT BLOCK */
+.product-block {
+  margin: 10px;
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-block__img-container {
+  width: 420px;
+  height: 480px;
+}
+.product-block__img {
+  width: 100%;
+  height: 100%;
+}
+.product-block__info-container {
+  text-align: center;
+  width: 100%;
+  background: #f2f0f3;
+}
+.product-block-title {
+  color: #451574;
+  font-size: 1.3rem;
+  background: #e1dee2;
+  padding: 10px;
+  margin: 0 0 20px;
+}
+.product-block-price {
+  font-size: 1.5rem;
+  margin: 10px auto 20px;
+  font-weight: 500;
+}
+
+/* STAR RATING */
+.star {
+  color: #f7be5a;
+  font-size: 1.3rem;
+}
+
 /* LOADING ICON */
 .loader {
   border: 16px solid #f3f3f3; /* Light grey */
