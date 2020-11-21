@@ -13,7 +13,7 @@ app.use(express.json())
 
 // Routes
 app.get('/api/products', (req, res) => {
-  res.status(200).send(data)
+  res.status(200).json(data.products)
 })
 
 // Runs server
