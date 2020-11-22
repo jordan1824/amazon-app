@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import axios from 'axios'
+import { useSelector, useDispatch } from 'react-redux'
+import { getProductDetails } from '../actions/productActions'
 
 // Components
 import Loader from './Loader'
@@ -9,23 +10,12 @@ import StarRating from './StarRating'
 
 function ProductDetail(props) {
   const { id } = useParams()
-  const [product, setProduct] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(false)
+  const dispatch = useDispatch()
+  const productDetails = useSelector(state => state.productDetails)
+  const { product, loading, error } = productDetails
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get('/api/products')
-        const currentProduct = response.data.find(product => product.id == id)
-        setProduct(currentProduct)
-        setLoading(false)
-      } catch (error) {
-        setError(error.message)
-        setLoading(false)
-      }
-    }
-    fetchProducts()
+    dispatch(getProductDetails(id))
   }, [id])
 
   if (loading) {
